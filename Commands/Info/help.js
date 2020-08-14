@@ -7,7 +7,7 @@ module.exports = {
     const Em = new Discord.MessageEmbed()
       .setTitle("Stupid Commands")
       .addField("Fun", "`meme`")
-      .addField("Info", "help")
+      .addField("Info", "`help`")
       .addField("Economy", "`bal`, `daily`")
       .setColor("RANDOM");
 
