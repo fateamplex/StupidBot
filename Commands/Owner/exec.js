@@ -5,7 +5,7 @@ module.exports = {
   name: "exec",
   description: "E",
   run: async(client, message, args) => {
-    if(message.author.id == bot.owner || message.author.id == bot.aephylics){
+    if(message.author.id == bot.owner || message.author.id == bot.subdev){
       const e = args.join(" ");
       exec(e, (error, data, getter) => {
 	if(error){

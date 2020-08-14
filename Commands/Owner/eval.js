@@ -11,7 +11,8 @@ module.exports = {
       return text;
 }
 try{
-    const code = args.join(" ");
+    if(message.author.id == bot.owner || message.author.id == bot.subdev){
+      const code = args.join(" ");
       let evaled = eval(code);
  
       if (typeof evaled !== "string")
@@ -21,8 +22,6 @@ try{
     } catch (err) {
       message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
     }
-    if(message.author.id == bot.owner || message.author.id == bot.aephylics){
-   
     } else return;
   }
 }
