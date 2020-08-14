@@ -1,0 +1,9 @@
+{
+  "weapons": {
+    "sword": "100",
+    "rifle": "1000"
+  },
+  "boxes": {
+    "bakabox": "10000"
+  }
+}

@@ -17,7 +17,7 @@ client.categories = fs.readdirSync("./Commands/");
 client.on('ready', () => {
   console.log(`[SYSTEM] Logged in as ${client.user.username}! Everything is functional and works fine!`);
 
-  client.user.setActivity("Changing code, bot is closed!");
+  client.user.setActivity(`Stupidbot | ${bot.codename} v${bot.version} | FakaCord`);
 });
 
 client.on('message', message => {
@@ -36,6 +36,10 @@ client.on('message', message => {
 
     if (command) 
         command.run(client, message, args);
+});
+
+client.on("guildCreate", guild => {
+    console.log(`Joined new guild: ${guild.name} with ${guild.users.cache}`);
 });
 
 client.login(process.env.TOKEN);
