@@ -1,4 +1,4 @@
-#Starting
+# Starting
 
 It's very easy to start the bot for now because we haven't added any complicated stuff!
 
@@ -14,7 +14,7 @@ If you want to change the config files head over to `./System/config.json`!
 
 Also delete the `./json.sqlite` file if you want to remove the database (We use `quick.db` to save lines of code)
 
-#Setting up the config
+## Setting up the config
 
 In the `./System` folder, create a new file called `config.json` and put the following code
 
@@ -36,7 +36,7 @@ In the `./System` folder, create a new file called `config.json` and put the fol
 ```
 change the `owner` to your ID and change the `aephylics` one to your subdeveloper!
 
-###Basic starting
+### Basic starting
 
 ```shell
 npm i
