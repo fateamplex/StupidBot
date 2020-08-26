@@ -6,9 +6,10 @@ module.exports = {
   run: async(client, message, args) => {
     const Em = new Discord.MessageEmbed()
       .setTitle("Stupid Commands")
+      .setDescription("**OOPS**: All of us developers (those developing stupid-bot) are busy with school so we can't work on this bot alot, thank you for reading lol")
       .addField("Fun", "`8ball`, `meme`, `joke(bad ones)`")
-      .addField("Info", "`help`, `uptime`")
-      .addField("Economy", "`bal`, `daily`, `shop`, `buy`")
+      .addField("Info", "`help`, `uptime`, `botinfo`")
+      .addField("Economy", "`bal`, `daily`, `shop`, `buy`, `use-box`, `inventory`")
       .addField("Moderation", "`ban`, `delete-channel`")
       .setColor("RANDOM");
 

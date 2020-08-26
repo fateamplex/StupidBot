@@ -7,16 +7,12 @@ module.exports = {
   run: async(client, message, args) => {
     const {bot} = require("../../System/config.json");
     let embed = new Discord.MessageEmbed()
-        .setTitle("**What is Stupid-bot?**")
-        .setDescription("Stupid-bot (aka Faka) is a Discord Bot created to force people to have headaches or just mess around. This bot was first a way for me to develop my javascript skills. But now, it went straight to hell.")
-        .addField("Created by:",
-            "Fakado- the head developer and is very horny\n\n" +
-            "Aephylics - the bug fixer and co-developer of StupidBot\n\n" +
-            "Big Papa - Bot Hoster and co-developer of StupidBot (Currently on vacation)\n\n" +
-            "Join our [Discord](https://discord.gg/SQk3fZY) to talk with the us shitty devs or hangout cuz y not?\n\n")
-        .setTimestamp()
-        .setFooter(`Version:  ${bot.version} | Currently on ${client.guilds.cache.size} servers with ${client.users.cache.size} users.`)
-        .setColor("GREEN");
+       .setTitle("Some shitty things about Stupid-bot (Faka)")
+       .addField("Developers", "Fakado - Head Developer / Founder (also very horny lol)\n\n Aephylics - Co-developer / Bug fixer \n\n Big Papa - Hoster / Bug fixer \n\n Zach - Co-hoster / maintainer")
+       .addField("Some other shitty things", `Library - [Discord.js](https://discord.js.org) using [nodejs](https://nodejs.org) \n\n Hosting - IDFK ASK BIG PAPA OR ZACH`)
+       .addField("Support", "For questions DM Fakado#1963 or Aephylics#2066! \n\n To view stupid-bot's new features join our [Discord Server](https://discord.gg/SQk3fZY) or to just mess around cuz our server is dead!")
+       .setColor("RANDOM")
+       .setFooter(`Currently in ${client.guilds.cache.size} guilds with ${client.users.cache.size}! | Version ${bot.version}!`);
 
     message.channel.send(embed);
   }

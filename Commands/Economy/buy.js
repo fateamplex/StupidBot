@@ -9,7 +9,10 @@ module.exports = {
     //Database Fetch
     let ub = db.fetch(`money_${message.author.id}`);
 
-    let ud = db.fetch(`diamonds_${message.author.id}`);
+    let ud = db.fetch(`diamonds_${message.author.id}`)
+
+    let f = db.fetch(`a1_${message.author.id}`);
+    let fr = db.fetch(`a2_${message.author.id}`);
 
     if(ud == null) ud = 0;
 
@@ -17,19 +20,56 @@ module.exports = {
 
     //Sword
     if(args[0] == "sword"){
+      if(f == "true") return message.channel.send("You've already buyed this item m8");
+
+
       if(ub < weapons.sword){
-        message.channel.send(`Bruh: You're too poor to buy this item1 You need atleast \`${weapons.sword}\`BakaCoins`);
+        message.channel.send(`Bruh: You're too poor to buy this item! You need atleast \`${weapons.sword}\`BakaCoins`);
       } else {
         try{
           db.subtract(`money_${message.author.id}`, weapons.sword);
-          db.push(`inv_${message.author.id}`, "Sword");
+          db.push(`weapons_${message.author.id}`, "Sword");
+          db.set(`a1_${message.author.id}`, "true");
 
           message.channel.send(`Hey homie, you've successfully buyed a sword for \`${weapons.sword}\`BakaCoins! GG`);
         } catch(err){
           message.channel.send("Woopsies: We're sorry but an error occured!").then(console.log(err));
         }
       }
+    } else if(args[0] == "rifle"){
+      if(fr == "true") return message.channel.send("You've already buyed this item m8");
+
+
+      if(ub < weapons.rifle){
+        message.channel.send(`Bruh: You're too poor to buy this item! You need atleast \`${weapons.rifle}\`BakaCoins`);
+      } else {
+        try{
+          db.subtract(`money_${message.author.id}`, weapons.rifle);
+          db.push(`weapons_${message.author.id}`, "Rifle");
+          db.set(`a2_${message.author.id}`, "true");
+
+          message.channel.send(`Hey homie, you've successfully buyed a rifle for \`${weapons.rifle}\`BakaCoins! GG`);
+        } catch(err){
+          message.channel.send("Woopsies: We're sorry but an error occured!").then(console.log(err));
+        }
+      }
     }
     //Boxes
+    else if(args[0] == "bakabox"){
+      if(ub < boxes.bakabox){
+        message.channel.send(`Bruh: You're too poor to buy this item! You need atleast \`${boxes.bakabox}\`BakaCoins`);
+      } else {
+        try{
+          db.subtract(`money_${message.author.id}`, boxes.bakabox);
+          db.add(`bakabox_${message.author.id}`, 1);
+
+          message.channel.send(`Hey homie, you've successfully buyed a bakabox for \`${boxes.bakabox}\`BakaCoins! GG`);
+        } catch(err){
+          message.channel.send("Woopsies: We're sorry but an error occured!").then(console.log(err));
+        }
+      }
+    } else {
+      message.channel.send("Bruh: That item doesn't exist! Note that all the items are in lowercase. For example `^buy sword` instead of `^buy Sword`!");
+    }
   }
 }

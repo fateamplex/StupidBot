@@ -52,7 +52,7 @@ module.exports = {
 
         // Check if the user's banable
         if (!toBan.bannable) {
-            return message.reply("HOLY: I can't ban that user because he is too godly...")
+            return message.reply("HOLY: I can't ban that user because he/she/them is too godly...")
                 .then(m => m.delete(5000));
         }
         
