@@ -7,6 +7,6 @@ module.exports = {
       let minutes = Math.floor(client.uptime / 60000) % 60;
       let seconds = Math.floor(client.uptime / 1000) % 60;
 
-      message.channel.send(`__Uptime (aka days without me showering):__\n${days}d ${hours}h ${minutes}m ${seconds}s`);
+      message.channel.send(`__Uptime (aka days without me showering if possible lol):__\n${days}d ${hours}h ${minutes}m ${seconds}s`);
   }
 }

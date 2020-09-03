@@ -1,9 +1,13 @@
 {
   "weapons": {
     "sword": "100",
-    "rifle": "1000"
+    "rifle": "1000",
+    "shield": "1000"
   },
   "boxes": {
     "bakabox": "10000"
+  },
+  "rings": {
+    "diamond": "1000000"
   }
 }

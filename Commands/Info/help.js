@@ -11,7 +11,8 @@ module.exports = {
       .addField("Info", "`help`, `uptime`, `botinfo`")
       .addField("Economy", "`bal`, `daily`, `shop`, `buy`, `use-box`, `inventory`")
       .addField("Moderation", "`ban`, `delete-channel`")
-      .setColor("RANDOM");
+     .addField('Music', 'Run `^music help` ')
+     .setColor("RANDOM");
 
       message.channel.send(Em);
   }
