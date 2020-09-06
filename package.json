@@ -16,6 +16,7 @@
     "discord-music-system": "^2.0.1",
     "discord.js": "^12.2.0",
     "express": "^4.17.1",
+    "fumey": "^1.0.1",
     "got": "^11.5.2",
     "http": "0.0.1-security",
     "parse-ms": "^2.1.0",
