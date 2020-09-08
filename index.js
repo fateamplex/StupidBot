@@ -54,18 +54,6 @@ client.on('guildCreate', guild => {
 
 client.login(process.env.TOKEN);
 
-//Music
-const MusicBot = require("discord-music-system"); // Require the module
- 
-const mbot = new MusicBot({ // Create the bot
-    token: process.env.TOKEN, // You can find the token at https://discord.com/developers/applications/
-    ytApiKey: process.env.YTKEY, // Video to explain how to get it: https://www.youtube.com/watch?v=VqML5F8hcRQ
-    prefix: '^music ', // Example: /
-    game: 'Music is out!! Run ^music help!!' // Example: /help
-});
- 
-mbot.run();
-
 const http = require('http');
 const express = require('express');
 const app = express();
