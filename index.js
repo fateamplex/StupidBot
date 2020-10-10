@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const db = require('quick.db');
 
 const { bot } = require('./System/config.json');
-const fs = require('fs');
+const fs = require("fs");
 const client = new Discord.Client();
 
 client.commands = new Discord.Collection();
@@ -45,7 +45,10 @@ client.on('message', message => {
 	let command = client.commands.get(cmd);
 	if (!command) command = client.commands.get(client.aliases.get(cmd));
 
-	if (command) command.run(client, message, args);
+	if (command){
+     command.run(client, message, args);
+     db.add(`comrun_${message.author.id}`, 1);
+  }
 });
 
 client.on('guildCreate', guild => {
@@ -65,3 +68,4 @@ app.listen(process.env.PORT);
 setInterval(() => {
 	http.get(`http://StupidPine.fateamplex.repl.co`);
 }, 280000);
+const Database = require("@replit/database")

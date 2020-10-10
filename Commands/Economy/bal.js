@@ -16,7 +16,7 @@ module.exports = {
     const Em = new Discord.MessageEmbed()
       .setTitle(`${message.author.username}'s Balance'`)
       .addField("BakaCoins", `${bal}$`)
-      .addField("BakaGems", `${di} :gem:`)
+      .addField("IQ", `${di} IQ`)
       .setColor("RANDOM");
 
       message.channel.send(Em);

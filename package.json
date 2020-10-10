@@ -21,6 +21,7 @@
     "http": "0.0.1-security",
     "parse-ms": "^2.1.0",
     "quick.db": "^7.1.1",
-    "util": "^0.12.3"
+    "util": "^0.12.3",
+    "ytdl-core": "^3.3.0"
   }
 }

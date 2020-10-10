@@ -1,0 +1,18 @@
+const got = require('got');
+const Discord = require('discord.js');
+const db = require("quick.db");
+
+module.exports = {
+  name: "hentai",
+  description: "E",
+  run: async(client, message, args) => {
+    let pre = db.fetch(`premium_${message.author.id}`);
+
+            if(pre == "true"){
+              //put here
+           }
+             else {
+              message.reply("OOPS: You need to buy premium to execute this command lol");
+            }
+  }
+}

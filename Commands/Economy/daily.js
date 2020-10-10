@@ -8,6 +8,7 @@ module.exports = {
   run: async(client, message, args) => {
     let timeout = 86400000;
     let amount = 500;
+    let damount = Math.floor(Math.random() * 11);
 
     let daily = db.fetch(`daily_${message.author.id}`);
 
@@ -23,11 +24,12 @@ module.exports = {
       const Eme = new Discord.MessageEmbed()
         .setTitle(`${message.author.username} Daily Reward!`, message.author.displayAvatarURL())
         .setColor("GREEN")
-        .setDescription(`Collected ${amount} BakaCoins!`);
+        .setDescription(`Collected ${amount} BakaCoins and ${damount} IQ`);
 
         message.channel.send(Eme);
 
         db.add(`money_${message.author.id}`, amount)
+        db.add(`diamonds_${message.author.id}`, damount)
         db.set(`daily_${message.author.id}`, Date.now())
     }
   }
