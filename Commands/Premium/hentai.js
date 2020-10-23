@@ -1,6 +1,6 @@
-const got = require('got');
-const Discord = require('discord.js');
 const db = require("quick.db");
+const got = require("got");
+const Discord = require("discord.js");
 
 module.exports = {
   name: "hentai",
