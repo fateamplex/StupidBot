@@ -7,12 +7,10 @@ module.exports = {
   run: async(client, message, args) => {
     const {bot} = require("../../System/config.json");
     let embed = new Discord.MessageEmbed()
-       .setTitle("Some shitty things about Stupid-bot (Faka)")
-       .addField("What is Stupid-bot?", "Stupid-bot (aka Faka) is a discord bot made by Fakado#1963. He created this bot to learn the basics of JavaScript, so basically it was not intended to be released to the public. But everything changed when he met Stupid-bots great sponsor NeoSoft owner! \n\n Anyways - Stupid-bot is a bot made for filling that one spot of your server. It's completely **muda** and dumb. Can't understand why ppl invite this bot lol")
-       .addField("Developers", "Fakado - Head Developer / Founder (also very horny lol)\n\n Aephylics - Co-developer / Bug fixer \n\n Big Papa - Hoster / Bug fixer \n\n Zach - Co-hoster / maintainer")
-       .addField("Some other shitty things", `Library - [Discord.js](https://discord.js.org) using [nodejs](https://nodejs.org) \n\n Hosting - IDFK ASK BIG PAPA OR ZACH`)
-       .addField("Support", "For questions DM Fakado#1963 or Aephylics#2066! \n\n To view stupid-bot's new features join our [Discord Server](https://discord.gg/SQk3fZY) or to just mess around cuz our server is dead!")
-       .addField("Sponsors", "NeoSoft - Our rival aswell, they develop in Python while we develop in JavaScript. Join their discord [here](https://discord.gg/KU5K3qK) \n\n GamerCord - Ayy, my personal favorite. Join or i'll eat your cookies! Join [here](https://discord.gg/pQuprTw)")
+       .setTitle("Some Sh!*ty things about Stupid-bot (aka Faka)")
+       .addField("Backstory", "Back in 2019, a normal horny discord user decided to learn programming. He was into JavaScript and learned alot of sh*t. Anyways, he thought that the best way he could learn JavaScript was to make a discord bot. And guess what? HE DID! \n He started over a million times and never gave up. He got support from [NeoSoft](https://discord.gg/fQEYHEG) and some fellow friends! As of today, Stupid-bot is a bot which takes functionality over quality!")
+       .addField("Developers", "Fakado#1963 - Main Project Leader. Founder of Stupid-bot and the horny dude \n\n Aephylics#2066 - Idea giver and co-developer. Fakado's main javascript teacher \n\n Zach - Hoster and the one who backups everything. Without him we would'nt be able to keep the bot alive! \n\n BigPapa - Ehh let's just put his name here, right Aephylics? \n\n GreenInkling - Founder of [NeoSoft](https://discord.gg/fQEYHEG). Helps us alot by giving us examples and teaching us. Very nice dude")
+       .addField("Links", "**[NeoSoft](https://discord.gg/fQEYHEG)** - Basicly, the bot is owned by them")
        .setColor("RANDOM")
        .setFooter(`Currently in ${client.guilds.cache.size} guilds with ${client.users.cache.size}! | Version ${bot.version}!`);
 

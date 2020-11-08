@@ -23,7 +23,7 @@ client.on('ready', () => {
 	);
 
 	client.user.setActivity(
-		`^help | Stupidbot | ${bot.codename} v${bot.version} | FakaCord`
+		`^help | Stupidbot | ${bot.codename} v${bot.version} | NeoSoft`
 	);
 });
 
