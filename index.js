@@ -4,7 +4,7 @@ const db = require('quick.db');
 
 const { bot } = require('./System/config.json');
 const fs = require("fs");
-const client = new Discord.Client();
+const client = new Discord.Client({ws: { properties : { $browser: "Discord iOS"}}});
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -45,10 +45,7 @@ client.on('message', message => {
 	let command = client.commands.get(cmd);
 	if (!command) command = client.commands.get(client.aliases.get(cmd));
 
-	if (command){
-     command.run(client, message, args);
-     db.add(`comrun_${message.author.id}`, 1);
-  }
+	if (command) command.run(client, message, args);
 });
 
 client.on('guildCreate', guild => {
